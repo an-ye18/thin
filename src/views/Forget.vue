@@ -118,8 +118,8 @@ export default {
       } else {
         this.$toast("注册成功");
         this.$router.push({
-          path: "/login1",
-          query: { username: this.username },
+          path: "/login",
+          // query: { username: this.username },
         });
       }
     },

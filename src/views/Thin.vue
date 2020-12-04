@@ -1,5 +1,5 @@
 <template>
-  <div id="index">
+  <div id="thin">
     <div class="top">
       <p>Anye</p>
       <div class="top1">

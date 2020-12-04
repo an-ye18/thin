@@ -82,6 +82,98 @@
               <van-icon name="eye" color="#a7a7a7" /> 123
             </p>
           </div>
+          <div class="tab1">
+            <span>
+              <img width="35rem" src="../assets/img/16.jpg" class="img3" />
+            </span>
+            <span> <span class="gray">憨憨</span><br />打卡 </span>
+            <span class="gray">
+              <span @click="showShare = true">分享</span>
+              <van-share-sheet
+                v-model="showShare"
+                :options="options"
+                @select="onSelect"
+              />
+            </span>
+          </div>
+          <div class="tab1-1">
+            <span></span>
+            <span><img src="../assets/img/16.jpg" width="150rem" /></span>
+            <p>
+              <van-icon name="good-job" color="#a7a7a7" /> 5
+              <van-icon name="chat" color="#a7a7a7" /> 8
+              <van-icon name="eye" color="#a7a7a7" /> 123
+            </p>
+          </div>
+          <div class="tab1">
+            <span>
+              <img width="35rem" src="../assets/img/17.jpg" class="img3" />
+            </span>
+            <span> <span class="gray">憨憨</span><br />打卡 </span>
+            <span class="gray">
+              <span @click="showShare = true">分享</span>
+              <van-share-sheet
+                v-model="showShare"
+                :options="options"
+                @select="onSelect"
+              />
+            </span>
+          </div>
+          <div class="tab1-1">
+            <span></span>
+            <span><img src="../assets/img/17.jpg" width="150rem" /></span>
+            <p>
+              <van-icon name="good-job" color="#a7a7a7" /> 5
+              <van-icon name="chat" color="#a7a7a7" /> 8
+              <van-icon name="eye" color="#a7a7a7" /> 123
+            </p>
+          </div>
+          <div class="tab1">
+            <span>
+              <img width="35rem" src="../assets/img/18.jpg" class="img3" />
+            </span>
+            <span> <span class="gray">憨憨</span><br />打卡 </span>
+            <span class="gray">
+              <span @click="showShare = true">分享</span>
+              <van-share-sheet
+                v-model="showShare"
+                :options="options"
+                @select="onSelect"
+              />
+            </span>
+          </div>
+          <div class="tab1-1">
+            <span></span>
+            <span><img src="../assets/img/18.jpg" width="150rem" /></span>
+            <p>
+              <van-icon name="good-job" color="#a7a7a7" /> 5
+              <van-icon name="chat" color="#a7a7a7" /> 8
+              <van-icon name="eye" color="#a7a7a7" /> 123
+            </p>
+          </div>
+          <div class="tab1">
+            <span>
+              <img width="35rem" src="../assets/img/19.jpg" class="img3" />
+            </span>
+            <span> <span class="gray">憨憨</span><br />打卡 </span>
+            <span class="gray">
+              <span @click="showShare = true">分享</span>
+              <van-share-sheet
+                v-model="showShare"
+                :options="options"
+                @select="onSelect"
+              />
+            </span>
+          </div>
+          <div class="tab1-1">
+            <span></span>
+            <span><img src="../assets/img/19.jpg" width="150rem" /></span>
+            <p>
+              <van-icon name="good-job" color="#a7a7a7" /> 5
+              <van-icon name="chat" color="#a7a7a7" /> 8
+              <van-icon name="eye" color="#a7a7a7" /> 123
+            </p>
+          </div>
         </van-tab>
         <van-tab title="推荐">
           <div class="tabTwo">
@@ -204,6 +296,7 @@
         </van-tab>
       </van-tabs>
     </div>
+    <Footer></Footer>
   </div>
 </template>
 <style scoped>
@@ -303,12 +396,19 @@
 .van-tab--active {
   color: #6bd4bc;
 }
+.van-overlay {
+  background-color: rgba(0, 0, 0, 0.3);
+}
 </style>
 <script>
+import Footer from "../components/Footer";
 export default {
+  components: {
+    Footer,
+  },
   data() {
     return {
-      active: 2,
+      active: 0,
       showShare: false,
       options: [
         [

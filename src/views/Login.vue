@@ -4,14 +4,14 @@
       <div class="input">
         <span><van-icon name="user-o" color="#cccdcf" /></span>
         <span>
-          <van-field v-model="username" placeholder="请输入手机号" />
+          <van-field v-model="from.username" placeholder="请输入手机号" />
         </span>
       </div>
       <div class="input">
         <span><van-icon name="eye-o" color="#cccdcf" /></span>
         <span>
           <van-field
-            v-model="password"
+            v-model="from.password"
             type="password"
             placeholder="请输入6-18位密码"
           />
@@ -70,23 +70,26 @@
 export default {
   data() {
     return {
-      username: "",
-      password: "",
+      from: {
+        username: "",
+        password: "",
+      },
     };
   },
   methods: {
     sub() {
       var reg = /^1\d{10}$/;
       var reg1 = /^\w{6,18}$/;
-      if (this.username == "") {
+      if (this.from.username == "") {
         this.$toast("手机号不能为空");
-      } else if (reg.test(this.username) == false) {
+      } else if (reg.test(this.from.username) == false) {
         this.$toast("手机号为1开头的11位数字");
-      } else if (this.password == "") {
+      } else if (this.from.password == "") {
         this.$toast("密码不能为空");
-      } else if (reg1.test(this.password) == false) {
+      } else if (reg1.test(this.from.password) == false) {
         this.$toast("密码长度必须要6-18位哦");
       } else {
+        var user = localStorage.setItem("user", JSON.stringify(this.from));
         this.$router.push({
           path: "/index",
         });
