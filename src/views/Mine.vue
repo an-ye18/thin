@@ -32,10 +32,10 @@
         <van-icon name="notes-o" size="2.5rem" color="#F29825" />
         <span>家庭账号</span>
       </p>
-      <p>
+      <router-link to="/shop" tag="p">
         <van-icon name="description" size="2.5rem" color="#F5D05E" />
         <span>商城</span>
-      </p>
+      </router-link>
       <p>
         <van-icon name="comment-o" size="2.5rem" color="#F75AA0" />
         <span>生理期</span>

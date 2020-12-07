@@ -39,12 +39,6 @@ const router = new VueRouter({
             component: () =>
                 import ("./views/Mine.vue"),
         },
-        // {
-        //     //登录1
-        //     path: "/login1",
-        //     component: () =>
-        //         import ("./views/Login1.vue")
-        // },
         {
             // 注册
             path: "/register",
@@ -86,6 +80,24 @@ const router = new VueRouter({
             path: "/daily",
             component: () =>
                 import ("./views/Daily.vue")
+        },
+        {
+            // 商城
+            path: "/shop",
+            component: () =>
+                import ("./views/Shop.vue")
+        },
+        {
+            // 商品详情
+            path: "/shopMore",
+            component: () =>
+                import ("./views/ShopMore.vue")
+        },
+        {
+            // 积分告知
+            path: "/point",
+            component: () =>
+                import ("./views/Point.vue")
         }
     ]
 
